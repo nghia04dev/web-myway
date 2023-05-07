@@ -1,0 +1,469 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* ===============================HEADER============================ */
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.logo_nav_search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* background-color: #373841; */
+    background-color: #294402;
+}
+.logo_nav{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.logo{
+    font-weight: bold;
+    padding: 27px 10px;
+    font-size: 14px;
+    border-radius: 50%;
+    text-transform: uppercase;
+    animation: flicker 0.1s linear infinite;
+    color: white;
+}
+@keyframes flicker{
+    0%{border: 5px solid rgb(234, 0, 255);}
+    25%{border: 5px solid rgb(13, 0, 254);}
+    50%{border: 5px solid rgb(255, 0, 0);}
+    100%{border: 5px solid rgb(251, 255, 0);}
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+}
+nav ul li a.active_page{
+    border: 2px solid red;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: 2px solid #444553;
+}
+nav ul li a:hover{
+    border:2px solid red;
+    /* color: red; */
+}
+/* ---------search-------- */
+.search{
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 250px;
+    height: 30px;
+    background-color:  #fff;
+}
+.search input{
+    flex-basis: 83%;
+    height:auto;
+    border-radius: 3px;
+    border: none;
+    padding: 0px 10px;
+}
+.search input:focus{
+    outline: none;
+}
+.search button{
+    flex-basis: 17%;
+    border-end-end-radius: 3px;
+    border-top-right-radius: 3px;
+    border: none;
+    background-color: #5470fa;
+    background-image: linear-gradient(315deg, #5470fa 0%, #C850C0 46%, #ff0015 100%);
+    color: white;
+    cursor: pointer;
+}
+/* ---------search-------- */
+/* ===============================HEADER============================ */
+/* =============================SECTION=============================== */
+section{
+    display: flex;
+    flex-direction: column;
+    background-color: #294402;
+    color: white;
+    padding: 20px;
+    gap: 10px;
+}
+.banner_slide{
+    display: flex;
+    gap: 10px;
+}
+.banner{
+    flex-basis: 50%;
+    height: 360px;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+.slide{
+    flex-basis: 50%;
+    padding: 20px 30px 0px 30px;
+}
+.slide h1{
+    font-size: 30px;
+    padding: 20px 0px;
+}
+.slide span{
+    display: block;
+    padding: 10px 0px;
+    font-size: 16px;
+}
+.slide button{
+    margin: 36px 10px 0px 00px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background-color: #5470fa;
+    background-image: linear-gradient(315deg, #5470fa 0%, #C850C0 46%, #ff0015 100%);    
+}
+.slide button:hover{
+    opacity: 0.9;
+}
+.slide button:active{
+    opacity: 0.7;
+}
+.dots{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0px 0px 0px;
+}
+.dots span{
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    display: block;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.dots span:hover{
+    background-color: white;
+}
+/* =============================SECTION=============================== */
+/* ============================== BUY NOW ========================= */
+.buynow{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.check{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.check .continue a{
+    color: #00a6ed;
+    /* background-color: red; */
+    padding: 10px 15px;
+    text-decoration: none;
+    display: flex;
+    gap: 5px;
+}
+.check div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+.check div button:hover{
+    opacity: 0.9;
+}
+.check div button:active{
+    opacity: 0.8;
+}
+button.bank{
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #fcd989;
+    cursor: pointer;
+    background-image: linear-gradient(180deg, #fcd989 0%, #fdaa0d 46%);    
+}
+button.bank strong{
+    font-family: tahoma;
+    font-size: 16px;
+    font-style: italic
+}
+span.pay{
+    color: #194158;
+}
+span.pal{
+    color: #3785bc;
+}
+/* --- */
+button.check_out{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 8px 15px;
+    border: none;
+    color: white;
+    background-color: #74bb04;
+    font-size: 20px;
+    border-top-right-radius: 25px;
+    border-end-end-radius: 25px;
+    cursor: pointer;
+}
+/* -------------buy----------- */
+.buy{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    border-bottom: 1px solid gray;
+    /* background-color: #3785bc; */
+}
+.select_adjust{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    background-color: #f6f6f6;
+    color: #2e2e2e;
+    padding: 15px;
+    border-bottom: 1px solid gray;
+}
+.select_adjust > div{
+    display: flex;
+    gap: 30px;
+}
+/* ----- */
+.your_item{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.product{
+    flex:1;
+    display: flex;
+    flex-basis: 30%;
+    gap: 10px;
+    align-items: center;
+}
+.product .img{
+    flex: 1;
+    flex-basis: 30%;
+}
+.product .img img{
+    width: 200px;
+}
+.infor{
+    flex: 1;
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.infor .name_product{
+    font-size: 16px;
+    font-weight: bold;
+    color: #00a6ed;
+}
+.infor > div span{
+    display: block;
+}
+.infor .edit{
+    display: flex;
+    gap: 10px;
+    padding: 40px 0px 0px 0px;
+    color: black;
+    font-weight: bold;
+}
+.edit a{
+    color: #00a6ed;  
+    text-decoration: none;
+}
+/* -------adjust-------- */
+.adjust{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px 15px 0px 0px;
+    height: 40px;
+    gap: 40px;
+}
+.adjust input{
+    width: 50px;
+    height: 20px;
+    border: 1px solid gray;
+    padding-left: 10px;
+}
+/* -------------buy----------- */
+/* --------- sales and total ---------- */
+.sales_total{
+    display: flex;
+    justify-content: space-between;
+}
+.sales{
+    flex: 1;
+    flex-basis: 40%;
+    padding: 0px 10px;
+}
+.see_details{
+    padding: 5px 20px;
+    border: 1px solid gray;
+    text-align: center;
+}
+.see_details span{
+    font-weight: bold;
+    color: #f49537;
+    font-size: 17px;
+    display: block;
+}
+.see_details a{
+    color: #00a6ed;
+    text-decoration: none;
+    font-weight: bold;
+}
+.code_sales{
+    padding: 20px 0px;
+}
+.code_sales label{
+    display: block;
+    padding: 5px 0px;
+}
+.code_sales input{
+    width: 55%;
+    height: 30px;
+    padding: 0px 10px;
+    border: 1px solid gray;
+}
+.code_sales input:focus{
+    outline: none;
+}
+.code_sales button{
+    width: 20%;
+    height: 32px;
+    border: none;
+    color: white;
+    background-color: #00a6ed;
+    cursor: pointer;
+}
+.code_sales button:hover{
+    opacity: 0.9;
+}
+.code_sales button:active{
+    opacity: 0.8;
+}
+/* ----------------- */
+.total{
+    flex: 1;
+    flex-basis: 60%;
+    background-color: #f1f1f1;
+}
+.quanlity{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-bottom: 1px solid gray;
+}
+.shipping_taxes{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+.shipping{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.shipping div{
+    display: flex;
+    gap: 10px;
+}
+.shipping div span{
+    color: #00a6ed;
+    cursor: pointer;
+    font-weight: bold;
+}
+.shipping select{
+    border: 1px solid gray;
+    border-radius: 3px;
+    height: 30px;
+    cursor: pointer;
+}
+.shipping select:focus{
+    outline: none;
+}
+.taxes{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.estimated_total{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+/* ----------------- */
+/* --------- sales and total ---------- */
+/* ============================== BUY NOW ========================= */
+footer{
+    padding: 20px 20px 10px 20px;
+    background-color: #1c1c20;
+    display: flex;
+    flex-direction: column;
+}
+.all_col{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    border-bottom: 2px solid white;
+    padding: 0px 0px 10px 0px;
+}
+.all_col > ul{
+    grid-column: 1fr 1fr 1fr 1fr;
+    color: white;
+}
+.all_col ul{
+    list-style: none;
+}
+.all_col ul a{
+    color: rgb(136, 136, 136);
+    text-decoration: none;
+    display: block;
+    padding: 5px 0px;
+}
+.all_col ul a:hover{
+    color: white;
+}
+.name_col{
+    font-weight: bold;
+}
+.copyright{
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    color: white;
+}
